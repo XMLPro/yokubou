@@ -12,8 +12,8 @@ type UserService interface {
 }
 
 type Reaction struct {
-	From id
-	To   id
+	From int
+	To   int
 	Type ReactionType
 }
 
@@ -25,13 +25,13 @@ type ReactionService interface {
 type ReactionType int
 
 const (
-	Fuck ReactionType = iota
+	Fuck ReactionType = 0
 	God
 	Cry
 	Pray
 )
 
-func (t *ReactionType) String() string {
+func (t ReactionType) String() string {
 	switch t {
 	case Fuck:
 		return "糞"
@@ -41,5 +41,7 @@ func (t *ReactionType) String() string {
 		return "泣"
 	case Pray:
 		return "祈"
+	default:
+		return ""
 	}
 }
