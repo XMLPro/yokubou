@@ -31,6 +31,6 @@ func SendHandler(w http.ResponseWriter, r *http.Request) {
 	w.Write([]byte(s))
 }
 
-func CreateUserHandler(w http.ResponseWriter, r *http.Request) {
+func CreateUserHandler(_ http.ResponseWriter, _ *http.Request) {
 
 }

@@ -26,9 +26,9 @@ type ReactionType int
 
 const (
 	Fuck ReactionType = 0
-	God
-	Cry
-	Pray
+	God  ReactionType = 1
+	Cry  ReactionType = 2
+	Pray ReactionType = 3
 )
 
 func (t ReactionType) String() string {
